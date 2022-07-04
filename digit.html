@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+ <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/apidoc.css?">
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<style>
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+icon {height: 1em;}
+</style>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-8jgo{border-color:#ffffff;text-align:center;vertical-align:top}
+</style>
+
+
+
+**Learning to Disambiguate Strongly Interacting Hands via Probabilistic Per-Pixel Part Segmentation**
+
+[Zicong Fan](https://zc-alexfan.github.io)<sup>1,2</sup>, [Adrian Spurr](https://ait.ethz.ch/people/spurra/)<sup>1</sup>, [Muhammed Kocabas](https://ps.is.tuebingen.mpg.de/person/mkocabas)<sup>1,2</sup>, [Siyu Tang](https://vlg.inf.ethz.ch/people/person-detail.siyutang.html)<sup>1</sup>, [Michael J. Black](https://ps.is.mpg.de/~black)<sup>2</sup>, [Otmar Hilliges](https://ait.ethz.ch/people/hilliges/)<sup>1</sup><br>
+<sup>1</sup>ETH Zürich, <sup>2</sup>Max Planck Institute for Intelligent Systems, Tübingen<br>
+*Oral Presentation, 3DV 2021* 
+
+<a class="github-button" href="https://github.com/zc-alexfan/digit-interacting" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star zc-alexfan/digit-interacting on GitHub">digit-interacting</a>
+<br>
+<a target="_blank" text-align='center' href='https://arxiv.org/abs/2107.00434'><img src="./assets/arxiv.svg" height="22px"></a>
+
+![DIGIT is robust to appearance ambiguities when hands interact.](./projects/digit/teaser.gif width=70%)
+
+## Abstract
+
+In natural conversation and interaction, our hands often overlap or are in contact with each other. Due to the homogeneous appearance of hands, this makes estimating the 3D pose of interacting hands from images difficult. In this paper we demonstrate that self-similarity, and the resulting ambiguities in assigning pixel observations to the respective hands and their parts, is a major cause of the final 3D pose error.
+
+Motivated by this insight, we propose DIGIT, a novel method for estimating the 3D poses of two interacting hands from a single monocular image. The method consists of two interwoven branches that process the input imagery into a per-pixel semantic part segmentation mask and a visual feature volume. In contrast to prior work, we do not decouple the segmentation from the pose estimation stage, but rather leverage the per-pixel probabilities directly in the downstream pose estimation task. To do so, the part probabilities are merged with the visual features and processed via fully-convolutional layers.
+
+We experimentally show that the proposed approach achieves new state-of-the-art performance on the InterHand2.6M dataset. We provide detailed ablation studies to demonstrate the efficacy of our method and to provide insights into how the modelling of pixel ownership affects 3D hand pose estimation.
+
+
+## Citing Us
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~text
+@inProceedings{fan2021digit,
+  title={Learning to Disambiguate Strongly Interacting Hands via Probabilistic Per-pixel Part Segmentation},
+  author={Fan, Zicong and Spurr, Adrian and Kocabas, Muhammed and Tang, Siyu and Black, Michael and Hilliges, Otmar},
+  booktitle={International Conference on 3D Vision (3DV)},
+  year={2021}
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+## Video
+
+![](https://www.youtube.com/watch?v=et3QQNKigzc)
+
+## Poster
+
+
+<a target="_blank" text-align='center' href='./projects/digit/poster.pdf'><img src="./projects/digit/poster_thumbnail.png" height="100%"></a>
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'medium'};</script>
+<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+
+<script type="text/javascript">
+window.markdeepOptions.tocStyle='none'
+</script>
