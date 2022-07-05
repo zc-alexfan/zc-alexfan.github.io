@@ -3,6 +3,8 @@
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
+
+
 <style>
 html, body {
     height: 100%;
@@ -19,6 +21,11 @@ body {
 }
 
 icon {height: 1em;}
+
+.iconleft {
+    float:left;
+    margin-right:5px;
+}
 </style>
 
 <style type="text/css">
@@ -71,12 +78,14 @@ In my Masters, I worked in vision + language problems (e.g., visual grounding, v
 </div>
 
 <div class="row">
-  <div class="column">**Learning to Disambiguate Strongly Interacting Hands via Probabilistic Per-pixel Part Segmentation**<br><u>Zicong Fan</u>, Adrian Spurr, Muhammed Kocabas, Siyu Tang, Michael J. Black, Otmar Hilliges.<br>*In Proceedings of the International Conference on 3D Vision (3DV), 2021* (Oral presentation)<br>
+  <div class="column">**Learning to Disambiguate Strongly Interacting Hands via Probabilistic Per-pixel Part Segmentation**<br><u>Zicong Fan</u>, Adrian Spurr, Muhammed Kocabas, Siyu Tang, Michael J. Black, Otmar Hilliges.<br>
+  <img class="iconleft" src="assets/award.png" height=20px> *In Proceedings of the International Conference on 3D Vision (3DV), 2021* (Oral presentation)<br>
   [[Project Page](https://zc-alexfan.github.io/digit)] [[Paper](https://arxiv.org/abs/2107.00434)] [[Code](https://github.com/zc-alexfan/digit-interacting)] [[Video](https://www.youtube.com/watch?v=et3QQNKigzc)] [[Bibtex](./bibs/fan2021digit.html)]
 </div>
 
 <div class="row">
-  <div class="column">**A Skeleton-driven Neural Occupancy Representation for Articulated Hands**<br>Korrawe Karunratanakul, Adrian Spurr, <u>Zicong Fan</u>, Otmar Hilliges, Siyu Tang.<br>*In Proceedings of the International Conference on 3D Vision (3DV), 2021* (Oral presentation)</div>
+  <div class="column">**A Skeleton-driven Neural Occupancy Representation for Articulated Hands**<br>Korrawe Karunratanakul, Adrian Spurr, <u>Zicong Fan</u>, Otmar Hilliges, Siyu Tang.<br>
+  <img class="iconleft" src="assets/award.png" height=20px> *In Proceedings of the International Conference on 3D Vision (3DV), 2021* (Oral presentation)</div>
   [[Paper](https://arxiv.org/abs/2109.11399)] [[Bibtex](./bibs/karunratanakul2021halo.html)]
 </div>
 
@@ -98,4 +107,34 @@ In my Masters, I worked in vision + language problems (e.g., visual grounding, v
 
 <script type="text/javascript">
 window.markdeepOptions.tocStyle='none'
+</script>
+<!-- 
+<script type='text/javascript'>
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
+</script>
+ -->
+
+<script type="text/javascript">
+// Reload page when loaded: github icon needs refreshed
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+
 </script>

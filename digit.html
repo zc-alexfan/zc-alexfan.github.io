@@ -72,3 +72,14 @@ We experimentally show that the proposed approach achieves new state-of-the-art 
 <script type="text/javascript">
 window.markdeepOptions.tocStyle='none'
 </script>
+
+<script type="text/javascript">
+// Reload page when loaded: github icon needs refreshed
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+
+</script>
