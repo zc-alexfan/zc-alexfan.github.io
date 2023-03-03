@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"
+            content="ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation">
+        <meta name="keywords" content="ARCTIC, Hand-object interaction">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            
+            gtag('js', new Date());
+            
+            gtag('config', 'G-PYVRSFMDRL');
+        </script>
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./static/css/bulma.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="./static/css/index.css">
+        <link rel="icon" href="./static/images/favicon.svg">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script src="./static/js/bulma-carousel.min.js"></script>
+        <script src="./static/js/bulma-slider.min.js"></script>
+        <script src="./static/js/index.js"></script>
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                    <a class="navbar-item" href="https://zc-alexfan.github.io">
+                    <span class="icon">
+                    <i class="fas fa-home"></i>
+                    </span>
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                        More Research
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="https://zc-alexfan.github.io/digit">
+                            DIGIT
+                            </a>
+                            <a class="navbar-item" href="https://eth-ait.github.io/tempclr">
+                            TempCLR
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation</h1>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                <a href="https://zc-alexfan.github.io/">Zicong Fan</a><sup>1,2</sup>,</span>
+                                <span class="author-block">
+                                <a href="https://ps.is.mpg.de/person/otaheri">Omid Taheri</a><sup>2</sup>,</span>
+                                <span class="author-block">
+                                <a href="https://ps.is.mpg.de/employees/dtzionas">Dimitrios Tzionas</a><sup>2</sup>,</span>
+                                <span class="author-block">
+                                <a href="https://ps.is.mpg.de/person/mkocabas">Muhammed Kocabas</a><sup>1,2</sup>,</span>
+                                <span class="author-block">
+                                <a href="https://ait.ethz.ch/people/kamanuel/">Manuel Kaufmann</a><sup>1</sup>,</span>
+                                <span class="author-block">
+                                <a href="https://ps.is.mpg.de/person/black">Michael J. Black</a><sup>2</sup>,</span>
+                                <span class="author-block">
+                                <a href="https://ait.ethz.ch/people/hilliges/">Otmar Hilliges</a><sup>1</sup>
+                                </span>
+                            </div>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block"><sup>1</sup>ETH Z&uuml;rich, Switzerland,</span>
+                                <span class="author-block"><sup>2</sup>Max Planck Institute for Intelligent Systems, T&uuml;bingen, Germany</span>
+                            </div>
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <!-- PDF Link. -->
+                                    <span class="link-block">
+                                    <a href=""
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                    </a>
+                                    </span>
+                                    <span class="link-block">
+                                    <a href=""
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="ai ai-arxiv"></i>
+                                    </span>
+                                    <span>arXiv</span>
+                                    </a>
+                                    </span>
+                                    <!-- Video Link. -->
+                                    <span class="link-block">
+                                    <a href="./static/videos/video.mp4"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fab fa-youtube"></i>
+                                    </span>
+                                    <span>Video</span>
+                                    </a>
+                                    </span>
+                                    <!-- Code Link. -->
+                                    <span class="link-block">
+                                    <a href="https://github.com/zc-alexfan/arctic-toolkit"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Toolkit</span>
+                                    </a>
+                                    </span>
+                                    <span class="link-block">
+                                    <a href="https://github.com/zc-alexfan/arctic-baselines"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Models</span>
+                                    </a>
+                                    </span>
+                                    <!-- Dataset Link. -->
+                                    <span class="link-block">
+                                    <a href="https://arctic.is.tue.mpg.de"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="far fa-images"></i>
+                                    </span>
+                                    <span>Data</span>
+                                    </a>
+                                    </span>
+                                    <!-- Email Link. -->
+                                    <span class="link-block">
+                                    <a href="mailto:zicong.fan@inf.ethz.ch"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="far fa-envelope"></i>
+                                    </span>
+                                    <span>Contact</span>
+                                    </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero teaser">
+            <div class="container is-max-desktop">
+                <div class="hero-body">
+                    <img src="./static/images/teaser.jpg" height="150%" />
+                    <h2 class="subtitle has-text-centered">
+                        <span class="dnerf">ARCTIC</span> is a video dataset of hands dexterously manipulating articulated objects. 
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column">
+                        <div class="content">
+                            <h2 class="title is-3">Dexterous Motion + Dynamic Contact</h2>
+                            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                                <source src="https://download.is.tue.mpg.de/arctic/static/videos/dexterous.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero is-light is-small">
+            <div class="hero-body">
+                <div class="container">
+                    <h2 class="title is-3">Sample Sequences with GT</h2>
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-steve">
+                            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                                <source src="https://download.is.tue.mpg.de/arctic/static/videos/seq01.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-chair-tp">
+                            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                                <source src="https://download.is.tue.mpg.de/arctic/static/videos/seq02.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-shiba">
+                            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                                <source src="https://download.is.tue.mpg.de/arctic/static/videos/seq03.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-fullbody">
+                            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+                                <source src="https://download.is.tue.mpg.de/arctic/static/videos/seq04.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-blueshirt">
+                            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+                                <source src="https://download.is.tue.mpg.de/arctic/static/videos/seq05.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-mask">
+                            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+                                <source src="https://download.is.tue.mpg.de/arctic/static/videos/seq06.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container is-max-desktop">
+                <!-- Abstract. -->
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                Humans intuitively understand that inanimate objects do not move by themselves, but that state changes are typically caused by human manipulation (e.g., the opening of a book). This is not yet the case for machines. In part this is because there exist no datasets with ground-truth 3D annotations for the study of physically consistent and synchronised motion of hands and articulated objects. To this end, we introduce ARCTIC -- a dataset of two hands that dexterously manipulate objects, containing 2.1M video frames paired with accurate 3D hand and object meshes and detailed, dynamic contact information. It contains bi-manual articulation of objects such as scissors or laptops, where hand poses and object states evolve jointly in time. We propose two novel articulated hand-object interaction tasks: (1) Consistent motion reconstruction: Given a monocular video, the goal is to reconstruct two hands and articulated objects in 3D, so that their motions are spatio-temporally consistent. (2) Interaction field estimation: Dense relative hand-object distances must be estimated from images. We introduce two baselines ArcticNet and InterField, respectively and evaluate them qualitatively and quantitatively on ARCTIC.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Abstract. -->
+                <!-- Paper video. -->
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Video</h2>
+                        <div class="publication-video">
+                            <iframe src="https://download.is.tue.mpg.de/arctic/static/videos/video.mp4"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Paper video. -->
+            </div>
+        </section>
+        <section class="section" id="ack">
+            <div class="container is-max-desktop content">
+                <h2 class="title">Acknowledgement</h2>
+                The authors deeply thank: Tsvetelina Alexiadis (TA) for trial coordination; Markus Höschle (MH), Senya Polikovsky, Matvey Safroshkin, Tobias Bauch (TB) for the capture setup; MH, TA and Galina Henz for data capture; Nima Ghorbani for MoSh++; Leyre Sánchez Vinuela, Andres Camilo Mendoza Patino, Mustafa Alperen Ekinci for data cleaning; TB for Vicon support; MH and Jakob Reinhardt for object scanning; Taylor McConnell for Vicon support, and data cleaning coordination; Benjamin Pellkofer for IT/web support. We also thank Adrian Spurr and Xu Chen for insightful discussion. OT and DT were supported by the German Federal Ministry of Education and Research (BMBF): Tübingen AI Center, FKZ: 01IS18039B".
+            </div>
+        </section>
+        <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+                <h2 class="title">BibTeX</h2>
+                <pre><code>
+@inproceedings{fan2023arctic,
+  title = {ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation},
+  author = {Fan, Zicong and Taheri, Omid and Tzionas, Dimitrios and Kocabas, Muhammed and Kaufmann, Manuel and Black, Michael J. and Hilliges, Otmar},
+  booktitle = {Proceedings IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year = {2023}
+}
+                </code></pre>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <a class="icon-link"
+                        href="">
+                    <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a class="icon-link" href="https://github.com/zc-alexfan" class="external-link" disabled>
+                    <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <div class="content">
+                            <p>
+                                This website is licensed under a <a rel="license"
+                                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                            </p>
+                            <p>
+                            This webpage is built with the template from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
