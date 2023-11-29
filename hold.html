@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"
+            content="HOLD: Category-agnostic 3D Reconstruction of Interacting Hands and Objects from Video">
+        <meta name="keywords" content="HOLD, Hand-object interaction">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HOLD: Category-agnostic 3D Reconstruction of Interacting Hands and Objects from Video</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            
+            gtag('js', new Date());
+            
+            gtag('config', 'G-PYVRSFMDRL');
+        </script>
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./static/css/bulma.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="./static/css/index.css">
+        <link rel="icon" href="./assets/clapping-hands-svgrepo-com.svg">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script src="./static/js/bulma-carousel.min.js"></script>
+        <script src="./static/js/bulma-slider.min.js"></script>
+        <script src="./static/js/index.js"></script>
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                    <a class="navbar-item" href="https://zc-alexfan.github.io">
+                    <span class="icon">
+                    <i class="fas fa-home"></i>
+                    </span>
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                        More Research
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="https://arctic.is.tue.mpg.de">
+                            ARCTIC
+                            </a>
+                            <a class="navbar-item" href="https://eth-ait.github.io/tempclr">
+                            TempCLR
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">HOLD ✍️: Category-agnostic 3D Reconstruction of Interacting Hands and Objects from Video</h1>
+                            <!-- <h1 class="title is-4 publication-title">3DV 2021 Oral</h1> -->
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <a href="https://zc-alexfan.github.io/">Zicong Fan</a><sup>1,2</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://scholar.google.com/citations?user=ipSS2ToAAAAJ&hl=en">Maria Parelli</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://ch.linkedin.com/in/marialena-kadoglou-337a10226">Maria Eleni Kadoglou</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://ps.is.tuebingen.mpg.de/person/mkocabas">Muhammed Kocabas</a><sup>1,2</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://xuchen-ethz.github.io/">Xu Chen</a><sup>1,2</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://ps.is.mpg.de/~black">Michael J. Black</a><sup>2</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://ait.ethz.ch/people/hilliges/">Otmar Hilliges</a><sup>1</sup>
+                                </span>
+                            </div>
+
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block"><sup>1</sup>ETH Z&uuml;rich, Switzerland,</span>
+                                <span class="author-block"><sup>2</sup>Max Planck Institute for Intelligent Systems, T&uuml;bingen, Germany</span>
+                            </div>
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <!-- PDF Link. -->
+                                    <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2107.00434"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                    </a>
+                                    </span>
+                                <!-- arxiv Link. -->
+                                  <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2011.12948"
+                                       class="external-link button is-normal is-rounded is-dark">
+                                      <span class="icon">
+                                          <i class="ai ai-arxiv"></i>
+                                      </span>
+                                      <span>arXiv</span>
+                                    </a>
+                                  </span>
+                                    <!-- Video Link. -->
+                                    <span class="link-block">
+                                    <a href="https://www.youtube.com/watch?v=et3QQNKigzc&ab_channel=AITETH"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fab fa-youtube"></i>
+                                    </span>
+                                    <span>Video</span>
+                                    </a>
+                                    </span>
+                                    <!-- Code Link. -->
+                                    <span class="link-block">
+                                    <a href="https://github.com/zc-alexfan/hold"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                    </a>
+                                    </span>           
+                                    <!-- Email Link. -->
+                                    <span class="link-block">
+                                    <a href="mailto:zicong.fan@inf.ethz.ch"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="far fa-envelope"></i>
+                                    </span>
+                                    <span>Contact</span>
+                                    </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero teaser">
+            <div class="container is-max-desktop">
+                <div class="hero-body">
+                    <img src="./projects/hold/teaser.jpeg" height="150%" />
+                    <h2 class="subtitle has-text-centered">
+                        <span class="dnerf">HOLD</span> can reconstructs detailed 3D geometries of novel objects and hands in interaction from in-the-lab static 3rd-person videos and challenging in-the-wild 1st-person videos. 
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./projects/hold/normals/bottle_normal.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="200%">
+            <source src="./projects/hold/normals/toycar_normal.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./projects/hold/normals/rubik_normal.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./projects/hold/normals/cup_normal.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./projects/hold/normals/box_normal.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <!-- Abstract. -->
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p>
+Since humans interact with diverse objects every day, the holistic 3D capture of these interactions is important to understand and model human behaviour. However, most existing methods for hand-object reconstruction from RGB either assume pre-scanned object templates or heavily rely on limited 3D hand-object data, restricting their ability to scale and generalize to more unconstrained interaction settings. To this end, we introduce HOLD -- the first category-agnostic method that reconstructs an articulated hand and object jointly from a monocular interaction video. We develop a compositional articulated implicit model that can reconstruct disentangled 3D hand and object from 2D images. We also further incorporate hand-object constraints to improve hand-object poses and consequently the reconstruction quality. Our method does not rely on 3D hand-object annotations while outperforming fully-supervised baselines in both in-the-lab and challenging in-the-wild settings. Moreover, we qualitatively show its robustness in reconstructing from in-the-wild videos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Abstract. -->
+                <!-- Paper video. -->
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-four-fifths">
+                    <h2 class="title is-3">Video</h2>
+                    <div class="publication-video">
+                      <iframe src="https://www.youtube.com/embed/et3QQNKigzc?rel=0&amp;showinfo=0"
+                              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Paper video. -->
+            </div>
+        </section>
+
+        <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+                <h2 class="title">BibTeX</h2>
+                <pre><code>
+@article{fan2023hold,
+  title={{HOLD}: Category-agnostic 3D Reconstruction of Interacting Hands and Objects from Video},
+  author={Fan, Zicong and Parelli, Maria and Kadoglou, Maria Eleni and Kocabas, Muhammed and Chen, Xu and Black, Michael J. and Hilliges, Otmar},
+  journal={arXiv preprint},
+  year={2023}
+}
+                </code></pre>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <a class="icon-link"
+                        href="">
+                    <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a class="icon-link" href="https://github.com/zc-alexfan" class="external-link" disabled>
+                    <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <div class="content">
+                            <p>
+                                This website is licensed under a <a rel="license"
+                                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                            </p>
+                            <p>
+                            This webpage is built with the template from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
