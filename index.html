@@ -4,7 +4,6 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
-
 <style>
 html, body {
     height: 100%;
@@ -44,9 +43,10 @@ icon {height: 1em;}
 ![ ](./assets/zfan.jpg  width="50%")
 
 
-I am a doctoral student at ETH supervised by Professor [Otmar Hilliges](https://ait.ethz.ch/people/hilliges/) and MPI Director [Michael J. Black](https://ps.is.mpg.de/~black). Before starting my Ph.D., I finished my B.Sc. (2018) and M.Sc. (2020) in Computer Science at The 
-University of British Columbia, Vancouver, Canada. In my bachelor, I worked with Professor [Ian M. Mitchell](https://www.cs.ubc.ca/~mitchell/) in robotics. 
-In my Masters, I worked in vision + language problems (e.g., visual grounding, visual commonsense reasoning) with Professor [Leonid Sigal](https://www.cs.ubc.ca/~lsigal/) and Professor [Jim Little](https://www.cs.ubc.ca/~little/) partly funded by NSERC CGS-M.
+I am a doctoral student at ETH supervised by Professor [Otmar Hilliges](https://ait.ethz.ch/people/hilliges/) and MPI Director [Michael J. Black](https://ps.is.mpg.de/~black). My main research interests lie in computer vision and machine learning. These include topics such as hand pose estimation and modelling the interaction of human-objects and human-scene. I am also interested in egocentric computer vision.
+
+Before starting my Ph.D., I finished my B.Sc. (2018) and M.Sc. (2020) in Computer Science at The 
+University of British Columbia, Vancouver, Canada. In my bachelor, I worked with Professor [Ian M. Mitchell](https://www.cs.ubc.ca/~mitchell/) in robotics. In my Masters, I worked in vision + language problems with Professor [Leonid Sigal](https://www.cs.ubc.ca/~lsigal/) and Professor [Jim Little](https://www.cs.ubc.ca/~little/).
 
 <div>
 <table class="tg">
@@ -57,11 +57,51 @@ In my Masters, I worked in vision + language problems (e.g., visual grounding, v
     <td class="tg-8jgo"><a target="_blank" href='https://scholar.google.ch/citations?user=jZXvcOsAAAAJ&hl=en&oi=ao'><img src="./assets/scholar.svg" height="40"></a></td>
     <td class="tg-8jgo"><a target="_blank" href='https://twitter.com/zc_alexfan'><img src="./assets/twitter.svg" height="40"></a></td>
     <td class="tg-8jgo"><a target="_blank" href='./assets/cv.pdf'><img src="./assets/cv.svg" height="40"></a></td>
-    <td class="tg-8jgo"><a target="_blank" href='./contact.html'><img src="./assets/email.png" height="40"></a></td>
   </tr>
 </thead>
 </table>
 </div>
+
+
+<div id="email-placeholder" style="cursor: pointer; color: blue;">Click here to view my email (JS required)</div>
+<div id="feedback" style="color: green; display: none;">Email copied to clipboard!</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var user = 'zicong.fan';
+    var domain = 'inf.ethz.ch';
+    var email = user + '@' + domain;
+
+    var emailPlaceholder = document.getElementById('email-placeholder');
+    var feedbackMessage = document.getElementById('feedback');
+    var emailRevealed = false;
+
+    emailPlaceholder.addEventListener('click', function() {
+        // Check if email is already revealed
+        if (!emailRevealed) {
+            // Replace placeholder text with the email address
+            emailPlaceholder.textContent = email;
+            emailRevealed = true;
+
+            // Copy the email address to the clipboard
+            navigator.clipboard.writeText(email).then(function() {
+                // Show feedback message
+                feedbackMessage.style.display = 'block';
+
+                // Hide the feedback message after 2 seconds
+                setTimeout(function() {
+                    feedbackMessage.style.display = 'none';
+                }, 2000);
+            }).catch(function(error) {
+                // Handle any errors
+                console.error('Error copying email to clipboard', error);
+            });
+        }
+    });
+});
+
+</script>
+
 
 ## News
 
@@ -84,7 +124,6 @@ Jemin Hwangbo, Jie Song, Otmar Hilliges.<br>
 *In Proceedings of the International Conference on 3D Vision (3DV), 2024, Davos, Switzerland.*</div>
   [[Project Page](https://eth-ait.github.io/artigrasp)] [[Paper](https://arxiv.org/pdf/2309.03891.pdf)] [[Video](https://youtu.be/L9KJ57y2ThI)] [[Code](https://github.com/zdchan/artigrasp)] [[Bibtex](./bibs/zhang2024artigrasp.html)]
 </div>
-
 
 
 <div class="row">
