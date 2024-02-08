@@ -57,51 +57,11 @@ University of British Columbia, Vancouver, Canada. In my bachelor, I worked with
     <td class="tg-8jgo"><a target="_blank" href='https://scholar.google.ch/citations?user=jZXvcOsAAAAJ&hl=en&oi=ao'><img src="./assets/scholar.svg" height="40"></a></td>
     <td class="tg-8jgo"><a target="_blank" href='https://twitter.com/zc_alexfan'><img src="./assets/twitter.svg" height="40"></a></td>
     <td class="tg-8jgo"><a target="_blank" href='./assets/cv.pdf'><img src="./assets/cv.svg" height="40"></a></td>
+    <td class="tg-8jgo"><a target="_blank" href='./contact.html'><img src="./assets/email.png" height="40"></a></td>
   </tr>
 </thead>
 </table>
 </div>
-
-
-<div id="email-placeholder" style="cursor: pointer; color: blue;">Click here to view my email (javascript required)</div>
-<div id="feedback" style="color: green; display: none;">Email copied to clipboard!</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    var user = 'zicong.fan';
-    var domain = 'inf.ethz.ch';
-    var email = user + '@' + domain;
-
-    var emailPlaceholder = document.getElementById('email-placeholder');
-    var feedbackMessage = document.getElementById('feedback');
-    var emailRevealed = false;
-
-    emailPlaceholder.addEventListener('click', function() {
-        // Check if email is already revealed
-        if (!emailRevealed) {
-            // Replace placeholder text with the email address
-            emailPlaceholder.textContent = email;
-            emailRevealed = true;
-
-            // Copy the email address to the clipboard
-            navigator.clipboard.writeText(email).then(function() {
-                // Show feedback message
-                feedbackMessage.style.display = 'block';
-
-                // Hide the feedback message after 2 seconds
-                setTimeout(function() {
-                    feedbackMessage.style.display = 'none';
-                }, 2000);
-            }).catch(function(error) {
-                // Handle any errors
-                console.error('Error copying email to clipboard', error);
-            });
-        }
-    });
-});
-
-</script>
-
 
 ## News
 
