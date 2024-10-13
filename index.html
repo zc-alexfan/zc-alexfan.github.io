@@ -42,7 +42,6 @@ icon {height: 1em;}
 .parent-container {
   text-align: left;
 }
-
 </style>
 
 <style type="text/css">
@@ -53,7 +52,6 @@ icon {height: 1em;}
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-8jgo{border-color:#ffffff;text-align:center;vertical-align:top}
 </style>
-
 
 
 **Zicong Fan (Alex)**
@@ -81,14 +79,69 @@ University of British Columbia, Vancouver, Canada. In my bachelor, I worked with
 </table>
 </div>
 
+<style>
+.attention-box {
+  position: relative;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 5px;
+  background-image: linear-gradient(to right, #3498db, #9b59b6, #f1c40f, #e74c3c); /* Define the colors */
+  background-size: 400% 100%; /* Set the size of the gradient */
+  animation: colorShift 10s infinite; /* Animate the gradient */
+  cursor: pointer; /* Add a pointer cursor to indicate clickability */
+}
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  75% {
+    background-position: 300% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+.attention-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+</style>
+<div class="attention-box" onclick="copyEmail(this)">
+  <b>I'll be entering the job market in late Summer or Fall 2025. If you have an openning, click to connect!</b>
+</div>
+<script>
+  function copyEmail(element) {
+    const a = "zicong";
+    const b = ".";
+    const c = ["fan", "inf", "ethz", "ch"];
+    const d = "@";
+    const email = a + b + c[0] + d + c[1] + b + c[2] + b + c[3];
+    navigator.clipboard.writeText(email).then(() => {
+      element.innerHTML = "Email copied to clipboard!";
+      element.classList.add("copied-style");
+    });
+  }
+</script>
+
 ## News
 
-- 2024/07: Organizing HANDS workshop at ECCV 2024
+- 2024/07: Organized HANDS workshop at ECCV 2024
 - 2024/07: Two papers accepted at ECCV 2024!
 - 2024/06: Started my internship at Reality Labs, Meta.
 - 2024/03: HOLD is accepted for CVPR 2024!
 - 2024/02: I am joining Meta Reality Labs as Research Scientist Intern in Summer
-- 2023/04: Organizing [HANDS workshop](https://sites.google.com/view/hands2023/home) at ICCV 2023
+- 2023/04: Organized [HANDS workshop](https://sites.google.com/view/hands2023/home) at ICCV 2023
 - 2023/04: Finished one-year exchange at [Perceiving Systems](https://ps.is.mpg.de), Max Planck Institute for Intelligent Systems
 - 2020/08: I began my Ph.D. in Zürich at [Advanced Interactive Technologies](https://ait.ethz.ch/) and [Perceiving Systems](https://ps.is.mpg.de/)
 - 2020/08: I finished my masters degree at the [UBC Vision Lab](https://vision.cs.ubc.ca/), Vancouver
