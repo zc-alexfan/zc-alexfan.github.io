@@ -51,6 +51,34 @@ icon {height: 1em;}
 .parent-container {
   text-align: left;
 }
+
+.focus {
+    background-color: #f0f8ff; /* Light blue background */
+    border-left: 4px solid #007acc; /* Blue border on the left */
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for emphasis */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.focus:hover {
+    background-color: #87cefa; /* Brighter blue on hover */
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: #007acc; /* Link color */
+    padding: 5px 3px; /* Button-like padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+a:hover {
+    background-color: #e0f7fa; /* Light blue on hover */
+    color: #005f7a; /* Darker blue text on hover */
+}
+
+
 </style>
 
 <style type="text/css">
@@ -61,6 +89,7 @@ icon {height: 1em;}
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-8jgo{border-color:#ffffff;text-align:center;vertical-align:top}
 </style>
+
 
 
 **Zicong Fan (Alex)**
@@ -103,6 +132,7 @@ University of British Columbia, Vancouver, Canada. In my bachelor, I worked with
   animation: colorShift 10s infinite; /* Animate the gradient */
   cursor: pointer; /* Add a pointer cursor to indicate clickability */
 }
+
 @keyframes colorShift {
   0% {
     background-position: 0% 50%;
@@ -126,6 +156,7 @@ University of British Columbia, Vancouver, Canada. In my bachelor, I worked with
   transition: all 0.2s ease-in-out;
 }
 </style>
+
 <div class="attention-box" onclick="copyEmail(this)">
   <b>I'll be entering the job market in late Summer or Fall 2025. If you have an openning, click to connect!</b>
 </div>
@@ -170,7 +201,7 @@ University of British Columbia, Vancouver, Canada. In my bachelor, I worked with
 [[Bibtex](./bibs/fan2024benchmarks.html)]
 </div>
 
-<div class="row">
+<div class="row focus">
     <div class="column">**HOLD: Category-agnostic 3D Reconstruction of Interacting Hands and Objects from Video**<br><u>Zicong Fan</u>, Maria Parelli, Maria Eleni Kadoglou, Muhammed Kocabas, Xu Chen, Michael J. Black, Otmar Hilliges.<br>
 *In Proceedings of Computer Vision and Pattern Recognition (CVPR), 2024, Seattle, United States.*
 <div class="parent-container">
@@ -192,7 +223,7 @@ Jemin Hwangbo, Jie Song, Otmar Hilliges.<br>
 </div>
 
 
-<div class="row">
+<div class="row focus">
     <div class="column">**ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation**<br><u>Zicong Fan</u>, Omid Taheri, Dimitrios Tzionas, Muhammed Kocabas, Manuel Kaufmann, Michael J. Black, Otmar Hilliges.<br>
 *In Proceedings of Computer Vision and Pattern Recognition (CVPR), 2023, Vancouver, Canada.*</div>
   [[Project Page](https://github.com/zc-alexfan/arctic)] [[Paper](https://download.is.tue.mpg.de/arctic/arctic_april_24.pdf)] [[Video](https://www.youtube.com/watch?v=bvMm8gfFbZ8)] [[Code](https://github.com/zc-alexfan/arctic)] [[Data](https://arctic.is.tue.mpg.de/)] [[Bibtex](./bibs/fan2023arctic.html)]
