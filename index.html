@@ -14,6 +14,97 @@ gtag('config', 'G-RJ93D4865V');
 
 
 <style>
+.email-copy-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 6px 16px;
+  background-color: #007acc;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.email-copy-button:hover {
+  background-color: #005fa3;
+  transform: translateY(-1px);
+}
+
+
+.highlight-elegant {
+  color: #1e3a8a;         /* Oxford blue */
+  font-style: italic;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+}
+
+.highlight-elegant:hover {
+  border-color: rgba(30, 58, 138, 0.6);
+}
+
+
+.fancy-photo-outer {
+  width: 240px;
+  height: 240px;
+  margin: 30px auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #14213d, #2f3e55, #3a506b);
+  background-size: 200% 200%;
+  animation: elegantPulse 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  transition: transform 0.3s ease;
+}
+
+.fancy-photo-outer:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.fancy-photo-inner {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    inset 0 1px 4px rgba(0, 0, 0, 0.08),
+    inset 0 -1px 4px rgba(255, 255, 255, 0.6);
+}
+
+.fancy-photo-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes elegantPulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
 html, body {
     height: 100%;
 }
@@ -97,10 +188,21 @@ a:hover {
 
 **Zicong Fan (Alex)**
 
-![ ](./assets/zfan.jpg  width="100%")
+<!-- ![ ](./assets/alex.png  width="100%") -->
+<div class="fancy-photo-outer">
+  <div class="fancy-photo-inner">
+    <img src="./assets/alex.png" alt="Zicong Fan">
+  </div>
+</div>
 
 
-I am a doctoral student at ETH supervised by Professor [Otmar Hilliges](https://ait.ethz.ch/people/hilliges/) and MPI Director [Michael J. Black](https://ps.is.mpg.de/~black). My main research interests lie in computer vision and machine learning. These include topics such as hand pose estimation and modelling the interaction of human-objects and human-scene. I am also interested in egocentric computer vision.
+I am a scientist at <a href="https://meshcapade.com/team">Meshcapade</a> working on <span class="highlight-elegant">learning hands in action</span>
+with expertise in 3D hand pose estimation, 3D human/hand-object reconstruction and generative synthesis.
+
+
+My PhD is at ETH Zürich supervised by Max Planck Institute Director [Michael J. Black](https://ps.is.mpg.de/~black) and ETH Zürich Professor [Otmar Hilliges](https://ait.ethz.ch/people/hilliges/).
+I co-organize the HANDS workshop series at ICCV/ECCV (2023–2025), a leading venue for hand perception and interaction in computer vision.
+My work integrates computer vision, deep learning, and 3D reasoning to build robust models for human-centric understanding.
 
 Before starting my Ph.D., I finished my B.Sc. (2018) and M.Sc. (2020) in Computer Science at The 
 University of British Columbia, Vancouver, Canada. In my bachelor, I worked with Professor [Ian M. Mitchell](https://www.cs.ubc.ca/~mitchell/) in robotics. In my Masters, I worked in vision + language problems with Professor [Leonid Sigal](https://www.cs.ubc.ca/~lsigal/) and Professor [Jim Little](https://www.cs.ubc.ca/~little/).
@@ -114,7 +216,6 @@ University of British Columbia, Vancouver, Canada. In my bachelor, I worked with
     <td class="tg-8jgo"><a target="_blank" href='https://scholar.google.ch/citations?user=jZXvcOsAAAAJ&hl=en&oi=ao'><img src="./assets/scholar.svg" height="40"></a></td>
     <td class="tg-8jgo"><a target="_blank" href='https://twitter.com/zc_alexfan'><img src="./assets/twitter.svg" height="40"></a></td>
     <td class="tg-8jgo"><a target="_blank" href='./assets/cv.pdf'><img src="./assets/cv.svg" height="40"></a></td>
-    <td class="tg-8jgo"><a target="_blank" href='./contact.html'><img src="./assets/email.png" height="40"></a></td>
   </tr>
 </thead>
 </table>
@@ -160,34 +261,42 @@ University of British Columbia, Vancouver, Canada. In my bachelor, I worked with
 }
 </style>
 
-<div class="attention-box" onclick="copyEmail(this)">
-  <b>I'll be entering the job market in late Summer or Fall 2025. If you have an openning, click to connect!</b>
-</div>
+<!-- <div class="attention-box" onclick="copyEmail(this)">
+  <b>Happy to discuss ideas and potential collaborations in areas overlapping with my work.</b>
+</div> -->
 <script>
-  function copyEmail(element) {
-    const a = "zicong";
-    const b = ".";
-    const c = ["fan", "inf", "ethz", "ch"];
-    const d = "@";
-    const email = a + b + c[0] + d + c[1] + b + c[2] + b + c[3];
-    navigator.clipboard.writeText(email).then(() => {
-      element.innerHTML = "Email copied to clipboard!";
-      element.classList.add("copied-style");
-    });
-  }
+function copyEmail(element) {
+  const a = "zicong";
+  const b = "mesh";
+  const c = ["capade", ".com"];
+  const d = "@";
+  const email = a + d + b + c[0] + c[1];
+  navigator.clipboard.writeText(email).then(() => {
+    element.innerHTML = "Copied to clipboard: " + email;  // show the actual email
+    element.classList.add("copied-style");
+  });
+}
 </script>
+
+<!-- <div onclick="copyEmail(this)">Click here to view my email</div> -->
+
+<div class="email-copy-button" onclick="copyEmail(this)">
+✉️ Click here to view my email
+</div>
 
 ## News
 
+
+- 2025/08: Started as a scientist at Meshcapade
+- 2025/06: Organized HANDS workshop at ICCV 2025
 - 2024/07: Organized HANDS workshop at ECCV 2024
 - 2024/07: Two papers accepted at ECCV 2024!
 - 2024/06: Started my internship at Reality Labs, Meta.
 - 2024/03: HOLD is accepted for CVPR 2024!
-- 2024/02: I am joining Meta Reality Labs as Research Scientist Intern in Summer
-- 2023/04: Organized [HANDS workshop](https://sites.google.com/view/hands2023/home) at ICCV 2023
-- 2023/04: Finished one-year exchange at [Perceiving Systems](https://ps.is.mpg.de), Max Planck Institute for Intelligent Systems
-- 2020/08: I began my Ph.D. in Zürich at [Advanced Interactive Technologies](https://ait.ethz.ch/) and [Perceiving Systems](https://ps.is.mpg.de/)
-- 2020/08: I finished my masters degree at the [UBC Vision Lab](https://vision.cs.ubc.ca/), Vancouver
+- 2024/02: Started at Meta Reality Labs as Research Scientist Intern
+- 2023/04: Organized HANDS workshop at ICCV 2023
+- 2020/08: Started my Ph.D. at [ETH Zürich](https://ait.ethz.ch/) and [Perceiving Systems](https://ps.is.mpg.de/)
+- 2020/08: Finished my masters degree at the [The University of British Columbia](https://vision.cs.ubc.ca/)
 
 ## Research
 
