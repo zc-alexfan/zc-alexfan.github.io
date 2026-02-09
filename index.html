@@ -173,16 +173,65 @@ a:hover {
 }
 
 
+<style>
+/* Single modern card */
+.highlight{
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 18px;
+
+  box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+  padding: 20px 22px;
+  margin: 24px 0;
+}
+
+/* Badge */
+.highlight-badge{
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+
+  padding: 4px 12px;
+  margin-bottom: 14px;
+
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+
+  color: #4338ca;
+  background: rgba(99,102,241,0.10);
+  border: 1px solid rgba(99,102,241,0.22);
+}
+
+/* Text block */
+.highlight-text{
+  line-height: 1.6;
+  font-size: 0.98em;
+}
+
+/* Image below, centered */
+.highlight-image{
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.highlight-image img{
+  max-width: 92%;
+  width: 80%;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
 </style>
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-8jgo{border-color:#ffffff;text-align:center;vertical-align:top}
-</style>
+
+
+
 
 
 
@@ -284,7 +333,25 @@ function copyEmail(element) {
 ✉️ Click here to view my email
 </div>
 
+## PALM dataset
+
+<div class="highlight highlight-vertical">
+  <div class="highlight-text">
+    ✨ <strong>Looking for hand scans data?</strong> <strong>PALM</strong> is a large-scale dataset with
+    <strong>13k registered 3dMD hand scans</strong> from <strong>263 subjects</strong> and
+    <strong>90k calibrated multiview RGB images</strong>.
+    See <a href="https://github.com/facebookresearch/PALM">PALM</a> for details.
+  </div>
+
+  <div class="highlight-image">
+    <img src="./assets/dataset-teaser.jpg" alt="PALM Teaser">
+  </div>
+</div>
+
+
+
 ## News
+
 
 <!-- - 2025/08: Started as a scientist at Meshcapade -->
 
@@ -301,7 +368,6 @@ function copyEmail(element) {
 - 2020/08: Finished my masters degree at the [The University of British Columbia](https://vision.cs.ubc.ca/)
 
 ## Research
-
 
 <div class="row focus">
     <div class="column">**PALM: A Dataset and Baseline for Learning Multi-subject Hand Prior**<br><u>Zicong Fan</u>, Edoardo Remelli, David Dimond, Fadime Sener, Liuhao Ge, Bugra Tekin, Cem Keskin, Shreyas Hampali.<br>
