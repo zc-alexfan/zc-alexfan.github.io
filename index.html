@@ -1,512 +1,917 @@
 <!DOCTYPE html>
- <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/apidoc.css?">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ93D4865V"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zicong Fan (Alex) | Epic Games</title>
+  <meta name="description" content="Zicong Fan (Alex) — machine learning researcher at Epic Games Digital Humans Research, specializing in 3D hand-object reconstruction and generative synthesis.">
 
-gtag('config', 'G-RJ93D4865V');
-</script>
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ93D4865V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RJ93D4865V');
+  </script>
 
-<style>
-.email-copy-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 6px 16px;
-  background-color: #007acc;
-  color: white;
-  font-weight: 500;
-  font-size: 15px;
-  text-align: center;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+  <!-- GitHub Buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-.email-copy-button:hover {
-  background-color: #005fa3;
-  transform: translateY(-1px);
-}
+  <style>
+    /* ── Variables ─────────────────────────────── */
+    :root {
+      --bg: #ffffff;
+      --fg: #0f0f0e;
+      --fg-muted: #52525b;
+      --fg-light: #a1a1aa;
+      --accent: #0057b8;
+      --accent-hover: #003f8a;
+      --accent-light: #eff6ff;
+      --accent-border: #bfdbfe;
+      --highlight-bg: #f0f7ff;
+      --highlight-border: #0057b8;
+      --award-color: #166534;
+      --award-bg: #dcfce7;
+      --award-border: #bbf7d0;
+      --chip-bg: #f4f4f5;
+      --chip-border: #d4d4d8;
+      --section-rule: #e4e4e7;
+      --max-w: 860px;
+      --radius: 6px;
+    }
 
+    /* ── Reset ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.highlight-elegant {
-  color: #1e3a8a;         /* Oxford blue */
-  font-style: italic;
-  font-weight: 500;
-  transition: border-color 0.3s ease;
-}
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.75;
+      padding: 0 20px 100px;
+    }
 
-.highlight-elegant:hover {
-  border-color: rgba(30, 58, 138, 0.6);
-}
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 3px;
+      transition: color 0.15s;
+    }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
 
+    /* ── Container ─────────────────────────────── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
 
-.fancy-photo-outer {
-  width: 240px;
-  height: 240px;
-  margin: 30px auto;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #14213d, #2f3e55, #3a506b);
-  background-size: 200% 200%;
-  animation: elegantPulse 12s ease infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow:
-    0 6px 12px rgba(0, 0, 0, 0.12),
-    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-  transition: transform 0.3s ease;
-}
+    /* ── Section headings ──────────────────────── */
+    .section-heading {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      margin-top: 56px;
+      margin-bottom: 22px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--section-rule);
+    }
 
-.fancy-photo-outer:hover {
-  transform: scale(1.03);
-  box-shadow:
-    0 8px 18px rgba(0, 0, 0, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
-}
+    /* ── Header ────────────────────────────────── */
+    .header {
+      display: flex;
+      gap: 44px;
+      align-items: flex-start;
+      padding-top: 60px;
+    }
 
-.fancy-photo-inner {
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow:
-    inset 0 1px 4px rgba(0, 0, 0, 0.08),
-    inset 0 -1px 4px rgba(255, 255, 255, 0.6);
-}
+    .photo-wrap {
+      flex-shrink: 0;
+    }
 
-.fancy-photo-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .photo-wrap img {
+      width: 200px;
+      height: 200px;
+      border-radius: 16px;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    }
 
-@keyframes elegantPulse {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+    .header-card {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 10px;
+    }
 
+    .name {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--fg);
+      margin-bottom: 6px;
+    }
+    .name .nick {
+      font-weight: 600;
+      color: var(--fg-muted);
+    }
 
+    .position {
+      font-size: 0.95rem;
+      color: var(--fg-muted);
+      margin-bottom: 14px;
+    }
 
-html, body {
-    height: 100%;
-}
+    .email-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.95rem;
+      color: var(--accent);
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: 'Lora', serif;
+      margin-bottom: 16px;
+      transition: color 0.15s;
+    }
+    .email-inline:hover { color: var(--accent-hover); }
+    .email-inline.copied { color: #166534; }
 
-html {
-    display: table;
-    margin: auto;
-}
+    .bio {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--fg);
+      margin-bottom: 12px;
+    }
+    .lede {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--accent);
+    }
 
-body {
-    display: table-cell;
-    vertical-align: middle;
-}
+    /* ── Social ────────────────────────────────── */
+    .social-row {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .social-row a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      transition: background 0.15s;
+      text-decoration: none;
+    }
+    .social-row a:hover { background: var(--chip-bg); }
+    .social-row a img { width: 24px; height: 24px; opacity: 0.6; transition: opacity 0.15s; }
+    .social-row a:hover img { opacity: 1; }
 
-.column {
-    flex: 1; /* Allow columns to grow and fill space */
-    padding: 10px; /* Inner spacing for columns */
-}
+    /* ── PALM callout ──────────────────────────── */
+    .callout {
+      margin-top: 44px;
+      border-radius: 12px;
+      background: #0b1929;
+      padding: 20px 28px;
+      display: flex;
+      gap: 36px;
+      align-items: center;
+      color: #fff;
+    }
 
-.iconleft {
-    float:left;
-    margin-right:5px;
-}
+    .callout-content { flex: 1; min-width: 0; }
 
-.award {
-  color: #555;
-  display: inline-block; /* Wraps around the content */
-  background-color: #e4facd; /* Light golden background */
-  padding: 1px 5px; /* Padding around the text */
-  margin: 2px auto; /* Adds top and bottom margin and auto left and right for centering */
-  border-radius: 5px; /* Rounded corners */
-  border: 1px solid #dcdcdc; /* Light grey border */
-  font-weight: bold; /* Make text bold */
-  font-size: 0.9em; /* Slightly smaller font size */
-  clear: both; /* Forces the element onto a new line */
-}
+    .callout-tag {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 8px;
+    }
 
-.parent-container {
-  text-align: left;
-}
+    .callout-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
 
-.focus {
-    background-color: #f0f8ff; /* Light blue background */
-    border-left: 4px solid #007acc; /* Blue border on the left */
-    padding: 10px;
-    font-weight: bold;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for emphasis */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
+    .callout-subtitle {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-bottom: 14px;
+      line-height: 1.55;
+    }
 
-.focus:hover {
-    background-color: #87cefa; /* Brighter blue on hover */
-}
+    .callout-stats {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
 
-a {
-    text-decoration: none; /* Remove underline */
-    color: #007acc; /* Link color */
-    padding: 5px 3px; /* Button-like padding */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
+    .callout-stat-num {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      font-style: italic;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
 
-a:hover {
-    background-color: #e0f7fa; /* Light blue on hover */
-    color: #005f7a; /* Darker blue text on hover */
-}
+    .callout-stat-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      color: #64748b;
+      letter-spacing: 0.04em;
+    }
 
+    .callout-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #1d4ed8;
+      color: #fff;
+      border-radius: 8px;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+    .callout-cta:hover { background: #2563eb; color: #fff; text-decoration: none; }
 
-<style>
-/* Single modern card */
-.highlight{
-  width: 100%;
-  box-sizing: border-box;
+    .callout-image { flex-shrink: 0; width: 360px; }
+    .callout-image img { width: 100%; border-radius: 10px; display: block; opacity: 0.92; }
 
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 18px;
+    /* ── Intern callout ────────────────────────── */
+    .intern-callout {
+      margin-top: 16px;
+      border-radius: 16px;
+      border: 1px solid #fde68a;
+      background: #fffbeb;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .intern-callout-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+    .intern-callout-body { flex: 1; }
+    .intern-callout-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #92400e;
+      margin-bottom: 4px;
+    }
+    .intern-callout-text {
+      font-size: 0.92rem;
+      color: #78350f;
+      line-height: 1.65;
+    }
 
-  box-shadow: 0 12px 32px rgba(0,0,0,0.10);
-  padding: 20px 22px;
-  margin: 24px 0;
-}
+    /* ── News ──────────────────────────────────── */
+    .news-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .news-list li {
+      display: flex;
+      gap: 18px;
+      font-size: 0.9rem;
+      align-items: baseline;
+    }
+    .news-date {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--fg-light);
+      flex-shrink: 0;
+      width: 66px;
+      letter-spacing: 0.02em;
+      padding-top: 2px;
+    }
 
-/* Badge */
-.highlight-badge{
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
+    /* ── Datasets ──────────────────────────────── */
+    .datasets-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .dataset-card {
+      border: 1px solid #e4e4e7;
+      border-radius: 10px;
+      padding: 18px 20px;
+      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+    }
+    .dataset-card-name {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .dataset-card-name a { color: var(--fg); text-decoration: none; }
+    .dataset-card-name a:hover { color: var(--accent); }
+    .dataset-card-desc {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .dataset-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .dataset-stat {
+      display: flex;
+      flex-direction: column;
+    }
+    .dataset-stat-num {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .dataset-stat-label {
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-top: 2px;
+    }
+    .dataset-keywords { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
+    .dataset-kw {
+      font-size: 0.68rem;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .dataset-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 10px; justify-content: space-evenly; }
+    .dataset-links .chip { flex: 1; text-align: center; }
+    @media (max-width: 640px) {
+      .datasets-grid { grid-template-columns: 1fr; }
+    }
 
-  padding: 4px 12px;
-  margin-bottom: 14px;
+    /* ── Papers ────────────────────────────────── */
+    .papers-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
 
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.4px;
+    .paper {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 16px 16px 16px 18px;
+      border-radius: var(--radius);
+      border-left: 3px solid transparent;
+      transition: background 0.15s;
+    }
+    .paper:hover { background: #fafafa; }
+    .paper.featured {
+      background: var(--highlight-bg);
+      border-left-color: var(--highlight-border);
+    }
+    .paper.featured:hover { background: #e4effd; }
 
-  color: #4338ca;
-  background: rgba(99,102,241,0.10);
-  border: 1px solid rgba(99,102,241,0.22);
-}
+    .paper-thumb {
+      flex-shrink: 0;
+      width: 210px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #f4f4f5;
+    }
+    .paper-thumb img,
+    .paper-thumb video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .paper-thumb.no-media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f4f4f5;
+    }
 
-/* Text block */
-.highlight-text{
-  line-height: 1.6;
-  font-size: 0.98em;
-}
+    .paper-body {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
 
-/* Image below, centered */
-.highlight-image{
-  margin-top: 18px;
-  display: flex;
-  justify-content: center;
-}
+    .paper-title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--fg);
+    }
+    .paper-authors {
+      font-size: 0.92rem;
+      color: var(--fg-muted);
+      line-height: 1.65;
+    }
+    .paper-venue {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
 
-.highlight-image img{
-  max-width: 92%;
-  width: 80%;
-  border-radius: 14px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-}
+    .award-badge {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--award-color);
+      background: var(--award-bg);
+      border: 1px solid var(--award-border);
+      padding: 1px 8px;
+      border-radius: 999px;
+      text-transform: none;
+    }
 
-</style>
+    .paper-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 4px;
+    }
+    .chip {
+      display: inline-block;
+      padding: 2px 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--fg-muted);
+      background: var(--chip-bg);
+      border: 1px solid var(--chip-border);
+      border-radius: 999px;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      text-decoration: none;
+    }
+    .chip:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      text-decoration: none;
+    }
 
+    /* ── Star history ──────────────────────────── */
+    .star-history img {
+      width: 100%;
+      border-radius: var(--radius);
+      border: 1px solid var(--section-rule);
+      display: block;
+    }
+    .github-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+      align-items: center;
+    }
 
+    /* ── Simple lists (edu / awards) ───────────── */
+    .simple-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .simple-list li {
+      display: flex;
+      gap: 18px;
+      font-size: 0.9rem;
+      align-items: baseline;
+    }
+    .yr {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--fg-light);
+      flex-shrink: 0;
+      width: 108px;
+    }
 
+    /* ── Service ───────────────────────────────── */
+    .service-group { margin-bottom: 18px; }
+    .service-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      margin-bottom: 6px;
+    }
+    .service-items { font-size: 0.9rem; line-height: 1.8; }
 
+    /* ── Responsive ────────────────────────────── */
+    @media (max-width: 620px) {
+      .header { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+      .social-row { justify-content: center; }
+      .paper { flex-direction: column; }
+      .paper-thumb { width: 100%; }
+      .callout { flex-direction: column; }
+      .callout-image { width: 100%; }
+      .paper-venue { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
 
+  <!-- Header -->
+  <header class="header">
+    <div class="photo-wrap">
+      <img src="./assets/alex.png" alt="Zicong Fan">
+    </div>
+    <div class="header-card">
+      <h1 class="name">Zicong Fan <span class="nick">(Alex)</span></h1>
+      <p class="position"><a href="https://scholar.google.ch/citations?user=6NjbexEAAAAJ&hl=en&oi=ao">Epic Games, Digital Humans Research</a></p>
+      <button class="email-inline" onclick="copyEmail(this)">&#9993;&#65039; Click to reveal email</button>
+      <div class="social-row">
+        <a href="https://github.com/zc-alexfan" target="_blank" title="GitHub"><img src="./assets/github.svg" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/zfancode/" target="_blank" title="LinkedIn"><img src="./assets/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://scholar.google.ch/citations?user=jZXvcOsAAAAJ&hl=en&oi=ao" target="_blank" title="Google Scholar"><img src="./assets/scholar.svg" alt="Scholar"></a>
+        <a href="https://twitter.com/zc_alexfan" target="_blank" title="Twitter"><img src="./assets/twitter.svg" alt="Twitter"></a>
+        <a href="./assets/cv.pdf" target="_blank" title="CV"><img src="./assets/cv.svg" alt="CV"></a>
+      </div>
+    </div>
+  </header>
 
+  <!-- Biography -->
+  <h2 class="section-heading">Biography</h2>
+  <p class="bio"><span class="lede">The hand is where intention meets the physical world.</span> Understanding how humans grasp, manipulate, and interact with objects is not just a perception problem &mdash; it is a blueprint for how intelligent systems should act. I reconstruct and synthesize these interactions to close the gap between vision and embodied intelligence.</p>
 
-**Zicong Fan (Alex)**
+  <p class="bio">I received my PhD from ETH Z&uuml;rich, advised by <a href="https://ps.is.mpg.de/~black">Michael J. Black</a>, <a href="https://scholar.google.com/citations?user=-epU9OsAAAAJ&hl=en">Otmar Hilliges</a>, and <a href="https://people.inf.ethz.ch/marc.pollefeys/">Marc Pollefeys</a>. Before that, I completed my BSc (2018) and MSc (2020) in Computer Science at the University of British Columbia &mdash; working with <a href="https://www.cs.ubc.ca/~mitchell/">Ian M. Mitchell</a> on robotics, and with <a href="https://www.cs.ubc.ca/~lsigal/">Leonid Sigal</a> and <a href="https://www.cs.ubc.ca/~little/">Jim Little</a> on vision and language. I have also spent wonderful time at Max Planck Institute for Intelligent Systems and Meta Reality Labs.</p>
 
-<!-- ![ ](./assets/alex.png  width="100%") -->
-<div class="fancy-photo-outer">
-  <div class="fancy-photo-inner">
-    <img src="./assets/alex.png" alt="Zicong Fan">
+  <p class="bio">My research centers on <a href="https://is.mpg.de/de/publications/fan2025thesis"><em>hands in action</em></a>: 3D hand pose estimation, human/hand-object reconstruction, and generative synthesis of interaction. I am drawn to problems where geometric structure, physical plausibility, and learning meet &mdash; and I seek methods that are both principled and practically useful. I co-organize the HANDS workshop series at ICCV/ECCV (2023&ndash;2025), a leading venue for hand perception and interaction in computer vision.</p>
+
+  <!-- Intern callout -->
+  <div class="intern-callout">
+    <div class="intern-callout-icon">&#128270;</div>
+    <div class="intern-callout-body">
+      <div class="intern-callout-title">Looking for Research Interns</div>
+      <div class="intern-callout-text">Research interns with publications at CVPR/ICCV/ECCV/NeurIPS and interest in human-object interaction (reconstruction, generation in 2D/3D/video/RL). Reach out.</div>
+    </div>
   </div>
+
+  <!-- News -->
+  <h2 class="section-heading">News</h2>
+  <ul class="news-list">
+    <li><span class="news-date">2026/02</span><span>Joined Epic Games (acquired)</span></li>
+    <li><span class="news-date">2025/08</span><span>Started as a scientist at Meshcapade</span></li>
+    <li><span class="news-date">2020/08</span><span>Started my Ph.D. at <a href="https://ait.ethz.ch/">ETH Z&uuml;rich</a> and <a href="https://ps.is.mpg.de/">Perceiving Systems</a></span></li>
+  </ul>
+
+  <!-- Datasets -->
+  <h2 class="section-heading">Datasets</h2>
+  <div class="datasets-grid">
+
+    <div class="dataset-card">
+      <div class="dataset-card-name"><a href="https://github.com/facebookresearch/PALM" target="_blank">PALM</a></div>
+      <div class="dataset-card-desc">Large-scale multi-subject hand scans with MANO registrations and calibrated multiview RGB captures.</div>
+      <div class="dataset-stats">
+        <div class="dataset-stat"><span class="dataset-stat-num">13k</span><span class="dataset-stat-label">3D scans</span></div>
+        <div class="dataset-stat"><span class="dataset-stat-num">263</span><span class="dataset-stat-label">subjects</span></div>
+        <div class="dataset-stat"><span class="dataset-stat-num">90k</span><span class="dataset-stat-label">RGB images</span></div>
+      </div>
+      <div class="dataset-keywords">
+        <span class="dataset-kw">3dMD scans</span>
+        <span class="dataset-kw">RGB images</span>
+        <span class="dataset-kw">MANO</span>
+      </div>
+      <div class="dataset-links">
+        <a class="chip" href="https://arxiv.org/abs/2511.05403" target="_blank">Paper</a>
+        <a class="chip" href="https://github.com/facebookresearch/PALM" target="_blank">Data</a>
+        <a class="chip" href="https://github.com/facebookresearch/PALM" target="_blank">Code</a>
+      </div>
+    </div>
+
+    <div class="dataset-card">
+      <div class="dataset-card-name"><a href="https://github.com/zc-alexfan/arctic" target="_blank">ARCTIC</a></div>
+      <div class="dataset-card-desc">Dexterous bimanual hand-object manipulation sequences captured with egocentric and allocentric views.</div>
+      <div class="dataset-stats">
+        <div class="dataset-stat"><span class="dataset-stat-num">2.1M</span><span class="dataset-stat-label">images</span></div>
+        <div class="dataset-stat"><span class="dataset-stat-num">1</span><span class="dataset-stat-label">egocentric</span></div>
+        <div class="dataset-stat"><span class="dataset-stat-num">8</span><span class="dataset-stat-label">exocentric</span></div>
+      </div>
+      <div class="dataset-keywords">
+        <span class="dataset-kw">MoCap</span>
+        <span class="dataset-kw">MANO</span>
+        <span class="dataset-kw">SMPL-X</span>
+        <span class="dataset-kw">Articulated Objects</span>
+      </div>
+      <div class="dataset-links">
+        <a class="chip" href="https://download.is.tue.mpg.de/arctic/arctic_april_24.pdf" target="_blank">Paper</a>
+        <a class="chip" href="https://arctic.is.tue.mpg.de/" target="_blank">Data</a>
+        <a class="chip" href="https://github.com/zc-alexfan/arctic" target="_blank">Code</a>
+      </div>
+    </div>
+
+    <div class="dataset-card">
+      <div class="dataset-card-name"><a href="https://github.com/zdchan/graspxl" target="_blank">GraspXL</a></div>
+      <div class="dataset-card-desc">Large-scale generated grasping motions for diverse objects across multiple dexterous hand models.</div>
+      <div class="dataset-stats">
+        <div class="dataset-stat"><span class="dataset-stat-num">500k+</span><span class="dataset-stat-label">objects &amp; grasping motions</span></div>
+<div class="dataset-stat"><span class="dataset-stat-num">4</span><span class="dataset-stat-label">hand models</span></div>
+      </div>
+      <div class="dataset-keywords">
+        <span class="dataset-kw">Grasping motions</span>
+        <span class="dataset-kw">Large-scale</span>
+        <span class="dataset-kw">MANO</span>
+      </div>
+      <div class="dataset-links">
+        <a class="chip" href="https://arxiv.org/abs/2403.19649" target="_blank">Paper</a>
+        <a class="chip" href="https://eth-ait.github.io/graspxl" target="_blank">Project</a>
+        <a class="chip" href="https://github.com/zdchan/graspxl" target="_blank">Code</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Research -->
+  <h2 class="section-heading">Research</h2>
+  <div class="papers-list">
+
+    <div class="paper featured">
+      <div class="paper-thumb"><img src="./assets/papers/palm.jpg" alt="PALM"></div>
+      <div class="paper-body">
+        <div class="paper-title">PALM: A Dataset and Baseline for Learning Multi-subject Hand Prior</div>
+        <div class="paper-authors"><u>Zicong Fan</u>, Edoardo Remelli, David Dimond, Fadime Sener, Liuhao Ge, Bugra Tekin, Cem Keskin, Shreyas Hampali.</div>
+        <div class="paper-venue">3DV 2026, Vancouver</div>
+        <div class="paper-links">
+          <a class="chip" href="https://arxiv.org/abs/2511.05403" target="_blank">Paper</a>
+          <a class="chip" href="https://github.com/facebookresearch/PALM" target="_blank">Data + Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-thumb"><img src="./assets/papers/magichoi.png" alt="MagicHOI"></div>
+      <div class="paper-body">
+        <div class="paper-title">MagicHOI: Leveraging 3D Priors for Accurate Hand-object Reconstruction from Short Monocular Video Clips</div>
+        <div class="paper-authors">Shibo Wang, Haonan He, Maria Parelli, Christoph Gebhardt, <u>Zicong Fan</u><sup>&#9827;</sup>, Jie Song. <small>(&#9827; Project Lead)</small></div>
+        <div class="paper-venue">ICCV 2025, Honolulu</div>
+        <div class="paper-links">
+          <a class="chip" href="https://byran-wang.github.io/MagicHOI/" target="_blank">Project Page</a>
+          <a class="chip" href="https://arxiv.org/abs/2508.05506" target="_blank">Paper</a>
+          <a class="chip" href="https://www.youtube.com/watch?v=G0gmHxgnDxA" target="_blank">Video</a>
+          <a class="chip" href="https://github.com/byran-wang/MagicHOI" target="_blank">Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-thumb">
+        <video autoplay muted loop playsinline>
+          <source src="./assets/papers/graspxl.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="paper-body">
+        <div class="paper-title">GraspXL: Generating Grasping Motions for Diverse Objects at Scale</div>
+        <div class="paper-authors">Hui Zhang, Sammy Christen, <u>Zicong Fan</u>, Otmar Hilliges, Jie Song.</div>
+        <div class="paper-venue">ECCV 2024, Milan</div>
+        <div class="paper-links">
+          <a class="chip" href="https://eth-ait.github.io/graspxl" target="_blank">Project Page</a>
+          <a class="chip" href="https://arxiv.org/abs/2403.19649" target="_blank">Paper</a>
+          <a class="chip" href="https://youtu.be/0-dRbxmX2PI" target="_blank">Video</a>
+          <a class="chip" href="https://github.com/zdchan/graspxl" target="_blank">Code</a>
+          <a class="chip" href="./bibs/zhang2024graspxl.html">Bibtex</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-thumb"><img src="./assets/papers/hands2023.png" alt="Benchmarks"></div>
+      <div class="paper-body">
+        <div class="paper-title">Benchmarks and Challenges in Pose Estimation for Egocentric Hand Interactions with Objects</div>
+        <div class="paper-authors"><u>Zicong Fan</u><sup>*</sup>, Takehiko Ohkawa<sup>*</sup>, Linlin Yang<sup>*</sup>, Nie Lin, Zhishan Zhou, Shihao Zhou, Jiajun Liang, Zhong Gao, Xuanyang Zhang, Xue Zhang, Fei Li, Liu Zheng, Feng Lu, Karim Abou Zeid, Bastian Leibe, Jeongwan On, Seungryul Baek, Aditya Prakash, Saurabh Gupta, Kun He, Yoichi Sato, Otmar Hilliges, Hyung Jin Chang, Angela Yao. <small>(* Equal Contribution)</small></div>
+        <div class="paper-venue">ECCV 2024, Milan</div>
+        <div class="paper-links">
+          <a class="chip" href="https://arxiv.org/abs/2403.16428" target="_blank">Paper</a>
+          <a class="chip" href="./bibs/fan2024benchmarks.html">Bibtex</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper featured">
+      <div class="paper-thumb">
+        <video autoplay muted loop playsinline>
+          <source src="./assets/papers/hold.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="paper-body">
+        <div class="paper-title">HOLD: Category-agnostic 3D Reconstruction of Interacting Hands and Objects from Video</div>
+        <div class="paper-authors"><u>Zicong Fan</u>, Maria Parelli, Maria Eleni Kadoglou, Muhammed Kocabas, Xu Chen, Michael J. Black, Otmar Hilliges.</div>
+        <div class="paper-venue">CVPR 2024, Seattle <span class="award-badge">Highlight &mdash; Top 11.9%</span></div>
+        <div class="paper-links">
+          <a class="chip" href="https://zc-alexfan.github.io/hold" target="_blank">Project Page</a>
+          <a class="chip" href="https://download.is.tue.mpg.de/hold/paper.pdf" target="_blank">Paper</a>
+          <a class="chip" href="https://youtu.be/xm6WSkr2sIs" target="_blank">Video</a>
+          <a class="chip" href="https://github.com/zc-alexfan/hold" target="_blank">Code</a>
+          <a class="chip" href="./bibs/fan2024hold.html">Bibtex</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-thumb">
+        <video autoplay muted loop playsinline>
+          <source src="./assets/papers/artigrasp.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="paper-body">
+        <div class="paper-title">ArtiGrasp: Physically Plausible Synthesis of Bi-Manual Dexterous Grasping and Articulation</div>
+        <div class="paper-authors">Hui Zhang, Sammy Christen, <u>Zicong Fan</u>, Luocheng Zheng, Jemin Hwangbo, Jie Song, Otmar Hilliges.</div>
+        <div class="paper-venue">3DV 2024, Davos <span class="award-badge">Spotlight Presentation</span></div>
+        <div class="paper-links">
+          <a class="chip" href="https://eth-ait.github.io/artigrasp" target="_blank">Project Page</a>
+          <a class="chip" href="https://arxiv.org/pdf/2309.03891.pdf" target="_blank">Paper</a>
+          <a class="chip" href="https://youtu.be/L9KJ57y2ThI" target="_blank">Video</a>
+          <a class="chip" href="https://github.com/zdchan/artigrasp" target="_blank">Code</a>
+          <a class="chip" href="./bibs/zhang2024artigrasp.html">Bibtex</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper featured">
+      <div class="paper-thumb"><img src="./assets/papers/arctic.gif" alt="ARCTIC"></div>
+      <div class="paper-body">
+        <div class="paper-title">ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation</div>
+        <div class="paper-authors"><u>Zicong Fan</u>, Omid Taheri, Dimitrios Tzionas, Muhammed Kocabas, Manuel Kaufmann, Michael J. Black, Otmar Hilliges.</div>
+        <div class="paper-venue">CVPR 2023, Vancouver</div>
+        <div class="paper-links">
+          <a class="chip" href="https://github.com/zc-alexfan/arctic" target="_blank">Project Page</a>
+          <a class="chip" href="https://download.is.tue.mpg.de/arctic/arctic_april_24.pdf" target="_blank">Paper</a>
+          <a class="chip" href="https://www.youtube.com/watch?v=bvMm8gfFbZ8" target="_blank">Video</a>
+          <a class="chip" href="https://github.com/zc-alexfan/arctic" target="_blank">Code</a>
+          <a class="chip" href="https://arctic.is.tue.mpg.de/" target="_blank">Data</a>
+          <a class="chip" href="./bibs/fan2023arctic.html">Bibtex</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-thumb"><img src="./assets/papers/hmp.png" alt="HMP"></div>
+      <div class="paper-body">
+        <div class="paper-title">HMP: Hand Motion Priors for Pose and Shape Estimation from Video</div>
+        <div class="paper-authors">Enes Duran, Muhammed Kocabas, Vasileios Choutas, <u>Zicong Fan</u>, Michael J. Black.</div>
+        <div class="paper-venue">WACV 2024, Waikoloa</div>
+        <div class="paper-links">
+          <a class="chip" href="https://hmp.is.tue.mpg.de/" target="_blank">Project Page</a>
+          <a class="chip" href="https://openaccess.thecvf.com/content/WACV2024/papers/Duran_HMP_Hand_Motion_Priors_for_Pose_and_Shape_Estimation_From_WACV_2024_paper.pdf" target="_blank">Paper</a>
+          <a class="chip" href="https://www.youtube.com/watch?v=MCmXutpg88o" target="_blank">Video</a>
+          <a class="chip" href="https://github.com/enesduran/HMP" target="_blank">Code</a>
+          <a class="chip" href="./bibs/duran2024hmp.html">Bibtex</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-thumb"><img src="./assets/papers/tempclr.jpg" alt="TempCLR"></div>
+      <div class="paper-body">
+        <div class="paper-title">TempCLR: Reconstructing Hands via Time-Coherent Contrastive Learning</div>
+        <div class="paper-authors"><u>Andrea Ziani</u><sup>&dagger;</sup>, <u>Zicong Fan</u><sup>&dagger;</sup>, Muhammed Kocabas, Sammy Christen, Otmar Hilliges. <small>(&dagger; Equal Contribution)</small></div>
+        <div class="paper-venue">3DV 2022, Prague</div>
+        <div class="paper-links">
+          <a class="chip" href="https://eth-ait.github.io/tempclr" target="_blank">Project Page</a>
+          <a class="chip" href="http://arxiv.org/abs/2209.00489" target="_blank">Paper</a>
+          <a class="chip" href="https://github.com/eth-ait/tempclr" target="_blank">Code</a>
+          <a class="chip" href="https://www.youtube.com/watch?v=VSsKx8SnFio" target="_blank">Video</a>
+          <a class="chip" href="./bibs/ziani2022tempclr.html">Bibtex</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-thumb"><img src="./assets/papers/digit.jpg" alt="DIGIT"></div>
+      <div class="paper-body">
+        <div class="paper-title">Learning to Disambiguate Strongly Interacting Hands via Probabilistic Per-pixel Part Segmentation</div>
+        <div class="paper-authors"><u>Zicong Fan</u>, Adrian Spurr, Muhammed Kocabas, Siyu Tang, Michael J. Black, Otmar Hilliges.</div>
+        <div class="paper-venue">3DV 2021, Virtual <span class="award-badge">Oral Presentation</span></div>
+        <div class="paper-links">
+          <a class="chip" href="https://zc-alexfan.github.io/digit" target="_blank">Project Page</a>
+          <a class="chip" href="https://arxiv.org/abs/2107.00434" target="_blank">Paper</a>
+          <a class="chip" href="https://github.com/zc-alexfan/digit-interacting" target="_blank">Code</a>
+          <a class="chip" href="https://www.youtube.com/watch?v=et3QQNKigzc" target="_blank">Video</a>
+          <a class="chip" href="./bibs/fan2021digit.html">Bibtex</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-thumb"><img src="./assets/papers/halo.jpg" alt="HALO"></div>
+      <div class="paper-body">
+        <div class="paper-title">A Skeleton-driven Neural Occupancy Representation for Articulated Hands</div>
+        <div class="paper-authors">Korrawe Karunratanakul, Adrian Spurr, <u>Zicong Fan</u>, Otmar Hilliges, Siyu Tang.</div>
+        <div class="paper-venue">3DV 2021, Virtual <span class="award-badge">Oral Presentation</span></div>
+        <div class="paper-links">
+          <a class="chip" href="https://arxiv.org/abs/2109.11399" target="_blank">Paper</a>
+          <a class="chip" href="./bibs/karunratanakul2021halo.html">Bibtex</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Code & Star History -->
+  <h2 class="section-heading">Code &amp; Star History</h2>
+  <div class="star-history">
+    <img src="https://api.star-history.com/svg?repos=zc-alexfan/arctic,zc-alexfan/digit-interacting,zc-alexfan/hold,eth-ait/tempclr,facebookresearch/PALM&type=Timeline" alt="Star History Chart">
+  </div>
+  <div class="github-buttons">
+    <a class="github-button" href="https://github.com/facebookresearch/PALM" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star facebookresearch/PALM on GitHub">PALM</a>
+    <a class="github-button" href="https://github.com/zc-alexfan/hold" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star zc-alexfan/hold on GitHub">hold</a>
+    <a class="github-button" href="https://github.com/zc-alexfan/arctic" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star zc-alexfan/arctic on GitHub">arctic</a>
+    <a class="github-button" href="https://github.com/zc-alexfan/digit-interacting" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star zc-alexfan/digit-interacting on GitHub">digit-interacting</a>
+    <a class="github-button" href="https://github.com/eth-ait/tempclr" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star eth-ait/tempclr on GitHub">tempclr</a>
+  </div>
+
+  <!-- Education -->
+  <h2 class="section-heading">Education</h2>
+  <ul class="simple-list">
+    <li><span class="yr">2020 &ndash; 2025</span><span>Ph.D. in Computer Science, ETH Z&uuml;rich</span></li>
+    <li><span class="yr">2018 &ndash; 2020</span><span>M.Sc. in Computer Science, University of British Columbia</span></li>
+    <li><span class="yr">2016 &ndash; 2018</span><span>B.Sc. in Computer Science, University of British Columbia</span></li>
+    <li><span class="yr">2014 &ndash; 2016</span><span>Associate of Science, Langara College</span></li>
+  </ul>
+
+  <!-- Awards -->
+  <h2 class="section-heading">Awards</h2>
+  <ul class="simple-list">
+    <li><span class="yr">2019</span><span>Alexander Graham Bell: Canada Graduate Scholarship-Master&rsquo;s, NSERC Canada</span></li>
+    <li><span class="yr">2017</span><span>Undergraduate Student Research Awards, NSERC Canada</span></li>
+    <li><span class="yr">2016</span><span>Governor General&rsquo;s Collegiate Bronze Medal</span></li>
+  </ul>
+
+
 </div>
 
-<!-- at <a href="https://meshcapade.com/team">Meshcapade</a> -->
-I am a scientist working on <span class="highlight-elegant">learning hands in action</span>
-with expertise in 3D hand pose estimation, 3D human/hand-object reconstruction and generative synthesis.
-
-
-My PhD is at ETH Zürich supervised by Max Planck Institute Director [Michael J. Black](https://ps.is.mpg.de/~black), ETH Zürich Professors [Otmar Hilliges](https://ait.ethz.ch/people/hilliges/) and [Marc Pollefeys](https://people.inf.ethz.ch/marc.pollefeys/).
-I co-organize the HANDS workshop series at ICCV/ECCV (2023–2025), a leading venue for hand perception and interaction in computer vision.
-My work integrates computer vision, deep learning, and 3D reasoning to build robust models for human-centric understanding.
-
-Before starting my Ph.D., I finished my B.Sc. (2018) and M.Sc. (2020) in Computer Science at The 
-University of British Columbia, Vancouver, Canada. In my bachelor, I worked with Professor [Ian M. Mitchell](https://www.cs.ubc.ca/~mitchell/) in robotics. In my Masters, I worked in vision + language problems with Professor [Leonid Sigal](https://www.cs.ubc.ca/~lsigal/) and Professor [Jim Little](https://www.cs.ubc.ca/~little/).
-
-<div>
-<table class="tg">
-<thead>
-  <tr>
-    <td class="tg-8jgo"><a target="_blank" href='https://github.com/zc-alexfan'><img src="./assets/github.svg" height="40"></a></td>
-    <td class="tg-8jgo"><a target="_blank" href='https://www.linkedin.com/in/zfancode/'><img src="./assets/linkedin.svg" height="40"></a></td>
-    <td class="tg-8jgo"><a target="_blank" href='https://scholar.google.ch/citations?user=jZXvcOsAAAAJ&hl=en&oi=ao'><img src="./assets/scholar.svg" height="40"></a></td>
-    <td class="tg-8jgo"><a target="_blank" href='https://twitter.com/zc_alexfan'><img src="./assets/twitter.svg" height="40"></a></td>
-    <td class="tg-8jgo"><a target="_blank" href='./assets/cv.pdf'><img src="./assets/cv.svg" height="40"></a></td>
-  </tr>
-</thead>
-</table>
-</div>
-
-<style>
-.attention-box {
-  position: relative;
-  padding: 10px;
-  color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  margin: 5px;
-  background-image: linear-gradient(to right, #3498db, #9b59b6, #f1c40f, #e74c3c); /* Define the colors */
-  background-size: 400% 100%; /* Set the size of the gradient */
-  animation: colorShift 10s infinite; /* Animate the gradient */
-  cursor: pointer; /* Add a pointer cursor to indicate clickability */
-}
-
-@keyframes colorShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 100% 50%;
-  }
-  50% {
-    background-position: 200% 50%;
-  }
-  75% {
-    background-position: 300% 50%;
-  }
-  100% {
-    background-position: 400% 50%;
-  }
-}
-.attention-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-in-out;
-}
-</style>
-
-<!-- <div class="attention-box" onclick="copyEmail(this)">
-  <b>Happy to discuss ideas and potential collaborations in areas overlapping with my work.</b>
-</div> -->
 <script>
 function copyEmail(element) {
-  const a = "zicong";
-  const b = "mesh";
-  const c = ["capade", ".com"];
-  const d = "@";
-  const email = a + d + b + c[0] + c[1];
+  const a = atob("emM=");
+  const b = atob("Z20=");
+  const c = [atob("YWls"), atob("LmNvbQ==")];
+  const d = atob("QA==");
+  const e = atob("Lg==");
+  const f = atob("YWxleA==");
+  const g = atob("ZmFu");
+  const email = a + e + f + g + d + b + c[0] + c[1];
   navigator.clipboard.writeText(email).then(() => {
-    element.innerHTML = "Copied to clipboard: " + email;  // show the actual email
-    element.classList.add("copied-style");
+    element.textContent = "Copied: " + email;
+    element.classList.add("copied");
   });
 }
 </script>
-
-<!-- <div onclick="copyEmail(this)">Click here to view my email</div> -->
-
-<div class="email-copy-button" onclick="copyEmail(this)">
-✉️ Click here to view my email
-</div>
-
-## PALM dataset
-
-<div class="highlight highlight-vertical">
-  <div class="highlight-text">
-    ✨ <strong>Looking for hand scans data?</strong> <strong>PALM</strong> is a large-scale dataset with
-    <strong>13k registered 3dMD hand scans</strong> from <strong>263 subjects</strong> and
-    <strong>90k calibrated multiview RGB images</strong>.
-    See <a href="https://github.com/facebookresearch/PALM">PALM</a> for details.
-  </div>
-
-  <div class="highlight-image">
-    <img src="./assets/dataset-teaser.jpg" alt="PALM Teaser">
-  </div>
-</div>
-
-
-
-## News
-
-
-<!-- - 2025/08: Started as a scientist at Meshcapade -->
-
-- 2025/11: PALM is accepted to 3DV 2026!
-- 2025/10: MagicHOI is accepted to ICCV 2025!
-- 2025/06: Organized HANDS workshop at ICCV 2025
-- 2024/07: Organized HANDS workshop at ECCV 2024
-- 2024/07: Two papers accepted at ECCV 2024!
-- 2024/06: Started my internship at Reality Labs, Meta.
-- 2024/03: HOLD is accepted for CVPR 2024!
-- 2024/02: Started at Meta Reality Labs as Research Scientist Intern
-- 2023/04: Organized HANDS workshop at ICCV 2023
-- 2020/08: Started my Ph.D. at [ETH Zürich](https://ait.ethz.ch/) and [Perceiving Systems](https://ps.is.mpg.de/)
-- 2020/08: Finished my masters degree at the [The University of British Columbia](https://vision.cs.ubc.ca/)
-
-## Research
-
-<div class="row focus">
-    <div class="column">**PALM: A Dataset and Baseline for Learning Multi-subject Hand Prior**<br><u>Zicong Fan</u>, Edoardo Remelli, David Dimond, Fadime Sener, Liuhao Ge, Bugra Tekin, Cem Keskin, Shreyas Hampali.<br>
-*In Proceedings of the International Conference on 3D Vision (3DV), 2026, Vancouver, Canada.*</div>
-[[Paper](https://arxiv.org/abs/2511.05403)] [[Data and Code](https://github.com/facebookresearch/PALM)] 
-</div>
-
-
-<div class="row">
-    <div class="column">**MagicHOI: Leveraging 3D Priors for Accurate Hand-object Reconstruction from Short Monocular Video Clips**<br>Shibo Wang, Haonan He, Maria Parelli, Christoph Gebhardt, <u>Zicong Fan</u><sup>&#9827;</sup>, Jie Song.(♣ Project Lead)<br>
-*In Proceedings of International Conference on Computer Vision (ICCV), 2025, Honolulu, United States.*</div>
-  [[Project Page](https://byran-wang.github.io/MagicHOI/)] [[Paper](https://arxiv.org/abs/2508.05506)] [[Video](https://www.youtube.com/watch?v=G0gmHxgnDxA)] [[Code](https://github.com/byran-wang/MagicHOI)] 
-</div>
-
-
-<div class="row">
-    <div class="column">**GraspXL: Generating Grasping Motions for Diverse Objects at Scale**<br>Hui Zhang, Sammy Christen, <u>Zicong Fan</u>, Otmar Hilliges, Jie Song.<br>
-*In Proceedings of European Conference on Computer Vision (ECCV), 2024, Milan, Italy.*</div>
-  [[Project Page](https://eth-ait.github.io/graspxl)] [[Paper](https://arxiv.org/abs/2403.19649)] [[Video](https://youtu.be/0-dRbxmX2PI)] [[Code](https://github.com/zdchan/graspxl)] [[Bibtex](./bibs/zhang2024graspxl.html)]
-</div>
-
-<div class="row">
-    <div class="column">**Benchmarks and Challenges in Pose Estimation for Egocentric Hand Interactions with Objects**<br><u>Zicong Fan</u><sup>&#9827;</sup>, Takehiko Ohkawa<sup>&#9827;</sup>, Linlin Yang<sup>&#9827;</sup>, Nie Lin, Zhishan Zhou, Shihao Zhou, Jiajun Liang, Zhong Gao, Xuanyang Zhang, Xue Zhang, Fei Li, Liu Zheng, Feng Lu, Karim Abou Zeid, Bastian Leibe, Jeongwan On, Seungryul Baek, Aditya Prakash, Saurabh Gupta, Kun He, Yoichi Sato, Otmar Hilliges, Hyung Jin Chang, Angela Yao. (&#9827; Equal Contribution)<br>
-*In Proceedings of European Conference on Computer Vision (ECCV), 2024, Milan, Italy.*</div>
-[[Paper](https://arxiv.org/abs/2403.16428)]
-[[Bibtex](./bibs/fan2024benchmarks.html)]
-</div>
-
-<div class="row focus">
-    <div class="column">**HOLD: Category-agnostic 3D Reconstruction of Interacting Hands and Objects from Video**<br><u>Zicong Fan</u>, Maria Parelli, Maria Eleni Kadoglou, Muhammed Kocabas, Xu Chen, Michael J. Black, Otmar Hilliges.<br>
-*In Proceedings of Computer Vision and Pattern Recognition (CVPR), 2024, Seattle, United States.*
-<div class="parent-container">
-  <span class="award">Accepted as Highlight (Top 11.9%)</span>
-</div>
-</div>
-  [[Project Page](https://zc-alexfan.github.io/hold)] [[Paper](https://download.is.tue.mpg.de/hold/paper.pdf)] [[Video](https://youtu.be/xm6WSkr2sIs)] [[Code](https://github.com/zc-alexfan/hold)] [[Bibtex](./bibs/fan2024hold.html)]
-</div>
-
-<div class="row">
-    <div class="column">**ArtiGrasp: Physically Plausible Synthesis of Bi-Manual Dexterous Grasping and Articulation**<br>Hui Zhang, Sammy Christen, <u>Zicong Fan</u>, Luocheng Zheng,
-Jemin Hwangbo, Jie Song, Otmar Hilliges.<br>
-*In Proceedings of the International Conference on 3D Vision (3DV), 2024, Davos, Switzerland.*
-<div class="parent-container">
-  <span class="award">Accepted as Spotlight Presentation</span>
-</div>
-</div>
-  [[Project Page](https://eth-ait.github.io/artigrasp)] [[Paper](https://arxiv.org/pdf/2309.03891.pdf)] [[Video](https://youtu.be/L9KJ57y2ThI)] [[Code](https://github.com/zdchan/artigrasp)] [[Bibtex](./bibs/zhang2024artigrasp.html)]
-</div>
-
-
-<div class="row focus">
-    <div class="column">**ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation**<br><u>Zicong Fan</u>, Omid Taheri, Dimitrios Tzionas, Muhammed Kocabas, Manuel Kaufmann, Michael J. Black, Otmar Hilliges.<br>
-*In Proceedings of Computer Vision and Pattern Recognition (CVPR), 2023, Vancouver, Canada.*</div>
-  [[Project Page](https://github.com/zc-alexfan/arctic)] [[Paper](https://download.is.tue.mpg.de/arctic/arctic_april_24.pdf)] [[Video](https://www.youtube.com/watch?v=bvMm8gfFbZ8)] [[Code](https://github.com/zc-alexfan/arctic)] [[Data](https://arctic.is.tue.mpg.de/)] [[Bibtex](./bibs/fan2023arctic.html)]
-</div>
-
-<div class="row">
-    <div class="column">**HMP: Hand Motion Priors for Pose and Shape Estimation from Video**<br>Enes Duran, Muhammed Kocabas, Vasileios Choutas, <u>Zicong Fan</u>, Michael J. Black.<br>
-*In Proceedings of Winter Conference on Applications of Computer Vision (WACV), 2024, Waikoloa, United States.*</div>
-  [[Project Page](https://hmp.is.tue.mpg.de/)] [[Paper](https://openaccess.thecvf.com/content/WACV2024/papers/Duran_HMP_Hand_Motion_Priors_for_Pose_and_Shape_Estimation_From_WACV_2024_paper.pdf)] [[Video](https://www.youtube.com/watch?v=MCmXutpg88o&ab_channel=EnesDuran)] [[Code](https://github.com/enesduran/HMP)] [[Bibtex](./bibs/duran2024hmp.html)]
-</div>
-
-
-<div class="row">
-  <div class="column">**TempCLR: Reconstructing Hands via Time-Coherent Contrastive Learning**<br>Andrea Ziani<sup>&#9827;</sup>, <u>Zicong Fan</u><sup>&#9827;</sup>, Muhammed Kocabas, Sammy Christen, Otmar Hilliges. (&#9827; Equal Contribution)<br>
-*In Proceedings of the International Conference on 3D Vision (3DV), 2022, Prague, Czechia.*</div>
- [[Project Page](https://eth-ait.github.io/tempclr)] [[Paper](http://arxiv.org/abs/2209.00489)] [[Code](https://github.com/eth-ait/tempclr)] [[Video](https://www.youtube.com/watch?v=VSsKx8SnFio)] [[Bibtex](./bibs/ziani2022tempclr.html)]
-</div>
-
-<div class="row">
-  <div class="column">**Learning to Disambiguate Strongly Interacting Hands via Probabilistic Per-pixel Part Segmentation**<br><u>Zicong Fan</u>, Adrian Spurr, Muhammed Kocabas, Siyu Tang, Michael J. Black, Otmar Hilliges.<br>
- *In Proceedings of the International Conference on 3D Vision (3DV), 2021, Virtual*
-<div class="parent-container">
-  <span class="award">Accepted as Oral Presentation</span>
-</div>
-  [[Project Page](https://zc-alexfan.github.io/digit)] [[Paper](https://arxiv.org/abs/2107.00434)] [[Code](https://github.com/zc-alexfan/digit-interacting)] [[Video](https://www.youtube.com/watch?v=et3QQNKigzc)] [[Bibtex](./bibs/fan2021digit.html)]
-</div>
-
-<div class="row">
-  <div class="column">**A Skeleton-driven Neural Occupancy Representation for Articulated Hands**<br>Korrawe Karunratanakul, Adrian Spurr, <u>Zicong Fan</u>, Otmar Hilliges, Siyu Tang.<br>
-*In Proceedings of the International Conference on 3D Vision (3DV), 2021, Virtual* 
-<div class="parent-container">
-  <span class="award">Accepted as Oral Presentation</span>
-</div>
-</div>
-  [[Paper](https://arxiv.org/abs/2109.11399)] [[Bibtex](./bibs/karunratanakul2021halo.html)]
-</div>
-
-
-<div class="row">
-  <div class="column">**Learning Motion Predictors for Smart Wheelchair using Autoregressive Sparse Gaussian Process**<br><u>Zicong Fan</u>, Lili Meng, Tian Qi Chen, Jingchun Li, Ian M Mitchell.<br>*In Proceedings of the International Conference on Robotics and Automation (ICRA), 2018, Brisbane, Australia*</div>
-  [[Paper](https://arxiv.org/abs/1710.11319)] [[Bibtex](./bibs/fan2018motion.html)]
-</div>
-
-
-## Code & star history
-
-![Star History Chart](https://api.star-history.com/svg?repos=zc-alexfan/arctic,zc-alexfan/digit-interacting,zc-alexfan/hold,eth-ait/tempclr,facebookresearch/PALM&type=Timeline)
-
- <a class="github-button" href="https://github.com/facebookresearch/PALM" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star facebookresearch/PALM on GitHub">PALM</a>
-<a class="github-button" href="https://github.com/zc-alexfan/hold" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star zc-alexfan/hold on GitHub">hold</a>
-<a class="github-button" href="https://github.com/zc-alexfan/arctic" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star zc-alexfan/arctic on GitHub">arctic</a>
-<a class="github-button" href="https://github.com/zc-alexfan/digit-interacting" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star zc-alexfan/digit-interacting on GitHub">digit-interacting</a>
-<a class="github-button" href="https://github.com/eth-ait/tempclr" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star on GitHub">tempclr</a>
-
-## Education
-
-- 2020 - Present: Ph.D. in Computer Science at ETH Zürich
-- 2018 - 2020: M.Sc. in Computer Science at The University of British Columbia
-- 2016 - 2018: B.Sc. in Computer Science at The University of British Columbia
-- 2014 - 2016: Associate of Science in Computer Science at Langara College 
-
-## Awards
-
-- 2019: Alexander Graham Bell: Canada Graduate Scholarship-Master's, issued by NSERC Canada
-- 2017: Undergraduate Student Research Awards, issued by NSERC Canada
-- 2016: the Governor General’s Collegiate Bronze Medal, issued by the Governor General of Canada
-
-## Service
-
-Workshop organizer
-
-- HANDS at ECCV'24, Milano
-- HANDS at ICCV'23, Paris
-
-Reviewing
-
-- NeurIPS '25
-- CVPR '23, '24, '25
-- ICCV '23, '25
-- ECCV '22, '24
-- SIGGRAPH ASIA '23
-- 3DV '23, '24
-- RA-L '23
-- ACCV '24
-
-<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'medium'};</script>
-<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
-
-<script type="text/javascript">
-window.markdeepOptions.tocStyle='none'
-</script>
+</body>
+</html>
