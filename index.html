@@ -505,8 +505,9 @@
     }
 
     /* ── Star history ──────────────────────────── */
+    .star-history { display: flex; justify-content: center; }
     .star-history img {
-      width: 100%;
+      width: 70%;
       border-radius: var(--radius);
       border: 1px solid var(--section-rule);
       display: block;
@@ -517,6 +518,7 @@
       gap: 8px;
       margin-top: 16px;
       align-items: center;
+      justify-content: center;
     }
 
     /* ── Simple lists (edu / awards) ───────────── */
@@ -800,7 +802,7 @@
     </div>
 
     <div class="paper featured">
-      <div class="paper-thumb"><img src="./assets/papers/arctic.gif" alt="ARCTIC"></div>
+      <div class="paper-thumb"><video src="./assets/papers/arctic.mp4" autoplay muted loop playsinline></video></div>
       <div class="paper-body">
         <div class="paper-title">ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation</div>
         <div class="paper-authors"><u>Zicong Fan</u>, Omid Taheri, Dimitrios Tzionas, Muhammed Kocabas, Manuel Kaufmann, Michael J. Black, Otmar Hilliges.</div>
