@@ -386,6 +386,7 @@
     .dataset-links .chip { flex: 1; text-align: center; }
     @media (max-width: 640px) {
       .datasets-grid { grid-template-columns: 1fr; }
+      .dataset-links .chip { flex: unset; }
     }
 
     /* ── Papers ────────────────────────────────── */
@@ -555,13 +556,32 @@
 
     /* ── Responsive ────────────────────────────── */
     @media (max-width: 620px) {
-      .header { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+      body { padding: 0 14px 80px; }
+
+      .header { flex-direction: column; align-items: center; text-align: center; gap: 20px; padding-top: 36px; }
+      .photo-wrap img { width: 140px; height: 140px; }
+      .name { font-size: 1.55rem; }
       .social-row { justify-content: center; }
-      .paper { flex-direction: column; }
+      .email-inline { justify-content: center; }
+
+      .section-heading { margin-top: 36px; }
+
+      .paper { flex-direction: column; gap: 12px; }
       .paper-thumb { width: 100%; }
+      .paper-links { flex-wrap: wrap; }
+
+      .intern-callout { padding: 18px; }
+      .intern-callout-title { font-size: 1rem; }
+
       .callout { flex-direction: column; }
       .callout-image { width: 100%; }
       .paper-venue { justify-content: flex-start; }
+
+      .star-history img { width: 100%; height: auto; }
+      .github-stars { flex-wrap: wrap; gap: 8px; }
+
+      .simple-list li { flex-direction: column; gap: 2px; }
+      .yr { min-width: unset; }
     }
   </style>
 </head>
@@ -725,7 +745,6 @@
           <a class="chip" href="https://arxiv.org/abs/2403.19649" target="_blank">Paper</a>
           <a class="chip" href="https://youtu.be/0-dRbxmX2PI" target="_blank">Video</a>
           <a class="chip" href="https://github.com/zdchan/graspxl" target="_blank">Code</a>
-          <a class="chip" href="./bibs/zhang2024graspxl.html">Bibtex</a>
         </div>
       </div>
     </div>
@@ -738,7 +757,6 @@
         <div class="paper-venue">ECCV 2024, Milan</div>
         <div class="paper-links">
           <a class="chip" href="https://arxiv.org/abs/2403.16428" target="_blank">Paper</a>
-          <a class="chip" href="./bibs/fan2024benchmarks.html">Bibtex</a>
         </div>
       </div>
     </div>
@@ -758,7 +776,6 @@
           <a class="chip" href="https://download.is.tue.mpg.de/hold/paper.pdf" target="_blank">Paper</a>
           <a class="chip" href="https://youtu.be/xm6WSkr2sIs" target="_blank">Video</a>
           <a class="chip" href="https://github.com/zc-alexfan/hold" target="_blank">Code</a>
-          <a class="chip" href="./bibs/fan2024hold.html">Bibtex</a>
         </div>
       </div>
     </div>
@@ -778,7 +795,6 @@
           <a class="chip" href="https://arxiv.org/pdf/2309.03891.pdf" target="_blank">Paper</a>
           <a class="chip" href="https://youtu.be/L9KJ57y2ThI" target="_blank">Video</a>
           <a class="chip" href="https://github.com/zdchan/artigrasp" target="_blank">Code</a>
-          <a class="chip" href="./bibs/zhang2024artigrasp.html">Bibtex</a>
         </div>
       </div>
     </div>
@@ -795,7 +811,6 @@
           <a class="chip" href="https://www.youtube.com/watch?v=bvMm8gfFbZ8" target="_blank">Video</a>
           <a class="chip" href="https://github.com/zc-alexfan/arctic" target="_blank">Code</a>
           <a class="chip" href="https://arctic.is.tue.mpg.de/" target="_blank">Data</a>
-          <a class="chip" href="./bibs/fan2023arctic.html">Bibtex</a>
         </div>
       </div>
     </div>
@@ -811,7 +826,6 @@
           <a class="chip" href="https://openaccess.thecvf.com/content/WACV2024/papers/Duran_HMP_Hand_Motion_Priors_for_Pose_and_Shape_Estimation_From_WACV_2024_paper.pdf" target="_blank">Paper</a>
           <a class="chip" href="https://www.youtube.com/watch?v=MCmXutpg88o" target="_blank">Video</a>
           <a class="chip" href="https://github.com/enesduran/HMP" target="_blank">Code</a>
-          <a class="chip" href="./bibs/duran2024hmp.html">Bibtex</a>
         </div>
       </div>
     </div>
@@ -827,7 +841,6 @@
           <a class="chip" href="http://arxiv.org/abs/2209.00489" target="_blank">Paper</a>
           <a class="chip" href="https://github.com/eth-ait/tempclr" target="_blank">Code</a>
           <a class="chip" href="https://www.youtube.com/watch?v=VSsKx8SnFio" target="_blank">Video</a>
-          <a class="chip" href="./bibs/ziani2022tempclr.html">Bibtex</a>
         </div>
       </div>
     </div>
@@ -843,7 +856,6 @@
           <a class="chip" href="https://arxiv.org/abs/2107.00434" target="_blank">Paper</a>
           <a class="chip" href="https://github.com/zc-alexfan/digit-interacting" target="_blank">Code</a>
           <a class="chip" href="https://www.youtube.com/watch?v=et3QQNKigzc" target="_blank">Video</a>
-          <a class="chip" href="./bibs/fan2021digit.html">Bibtex</a>
         </div>
       </div>
     </div>
@@ -856,7 +868,6 @@
         <div class="paper-venue">3DV 2021, Virtual <span class="award-badge">Oral Presentation</span></div>
         <div class="paper-links">
           <a class="chip" href="https://arxiv.org/abs/2109.11399" target="_blank">Paper</a>
-          <a class="chip" href="./bibs/karunratanakul2021halo.html">Bibtex</a>
         </div>
       </div>
     </div>
@@ -877,22 +888,6 @@
     <a class="github-button" href="https://github.com/eth-ait/tempclr" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star eth-ait/tempclr on GitHub">tempclr</a>
   </div>
 
-  <!-- Education -->
-  <h2 class="section-heading">Education</h2>
-  <ul class="simple-list">
-    <li><span class="yr">2020 &ndash; 2025</span><span>Ph.D. in Computer Science, ETH Z&uuml;rich</span></li>
-    <li><span class="yr">2018 &ndash; 2020</span><span>M.Sc. in Computer Science, University of British Columbia</span></li>
-    <li><span class="yr">2016 &ndash; 2018</span><span>B.Sc. in Computer Science, University of British Columbia</span></li>
-    <li><span class="yr">2014 &ndash; 2016</span><span>Associate of Science, Langara College</span></li>
-  </ul>
-
-  <!-- Awards -->
-  <h2 class="section-heading">Awards</h2>
-  <ul class="simple-list">
-    <li><span class="yr">2019</span><span>Alexander Graham Bell: Canada Graduate Scholarship-Master&rsquo;s, NSERC Canada</span></li>
-    <li><span class="yr">2017</span><span>Undergraduate Student Research Awards, NSERC Canada</span></li>
-    <li><span class="yr">2016</span><span>Governor General&rsquo;s Collegiate Bronze Medal</span></li>
-  </ul>
 
 
 </div>
